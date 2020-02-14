@@ -1,3 +1,4 @@
+node ('any') {
 stage ('checkout SCM'){
 
 checkout scm
@@ -22,4 +23,6 @@ sh "docker container rm -f \$(docker container ls -aq)"
 stage ('docker deploy'){
 
 sh "docker run -dt -p 4200:4200 angular"
+}
+
 }
