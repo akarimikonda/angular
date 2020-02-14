@@ -6,6 +6,8 @@ checkout scm
 }
 stage ('Docker build'){
 
+sh "sudo su"
+
 sh "cd angular8-helloworld-example-tutorial"
 
 sh "docker build -t akarimikonda/angular ."
