@@ -17,7 +17,7 @@ sh "docker push akarimikonda/angular"
 
 stage ('docker clean'){
 
-sh "docker container rm -f $(docker container ls -aq)"
+sh "docker container rm -f \$(docker container ls -aq)"
 }
 stage ('docker deploy){
 
